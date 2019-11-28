@@ -29,12 +29,12 @@ Stage.prototype.init = function(hash) {
   });
   this.startButton = new RoundRect(90, 210, 180, 60, {
     stroke: 'white',
-    text: 'START',
+    text: 'Start',
     textFill: 'white'
   });
   this.readmeButton = new RoundRect(90, 330, 180, 60, {
     stroke: 'white',
-    text: 'README',
+    text: 'Readme',
     textFill: 'white'
   });
   this.field = new Rect(30, 90, 300, 300, { stroke: 'white' });
@@ -66,7 +66,7 @@ Stage.prototype.init = function(hash) {
   });
   this.undoButton = new RoundRect(245, 410, 100, 50, {
     stroke: 'white',
-    text: 'Undo ',
+    text: 'Undo',
     textFill: 'white'
   });
   this.cursorIndex = -1;
@@ -363,13 +363,13 @@ Stage.prototype.push = function(stackIndex) {
   if (this.motions.length === this.limitCount) {
     if (this.toFieldCode(this.stacks) === this.finalFieldCode) {
       if (this.levelIndex < Levels.length - 1) {
-        this.showMessage('LEVEL COMPLETED', 'aqua');
+        this.showMessage('Level Completed', 'aqua');
       } else {
-        this.showMessage('CONGRATULATIONS!', 'yellow');
+        this.showMessage('Congratulations!', 'yellow');
       }
       this.completed = true;
     } else {
-      this.showMessage('LEVEL FAILED', 'fuchsia');
+      this.showMessage('Level Failed', 'fuchsia');
     }
   }
 };

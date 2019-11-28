@@ -186,7 +186,7 @@ Container.prototype.clearTimeout = function(timeoutId) {
 };
 
 Container.prototype.openUrl = function(url) {
-  this.window.location.href = url;
+  this.window.parent.location.href = url;
 };
 
 Container.prototype.getSearchParams = function() {
